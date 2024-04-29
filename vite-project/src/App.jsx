@@ -1,20 +1,20 @@
 const App = () => {
 
-const listItem =[]
+const itemList =[]
 
-  const acrecentar = (event) => {
+  const add = (event) => {
     console.log(event.target.value);
   };
-  const adicionar = () => {};
+  const toAdd = () => {};
 
   return (
     <div>
-      <input onChange={acrecentar} placeholder="O que tenho para fazer ..." />
-      <button onClick={adicionar}>Adicionar</button>
+      <input onChange={add} placeholder="What do I have to do..." />
+      <button onClick={toAdd}>To Add</button>
 
       <ul>
         {
-          listItem.map(task =>(
+          itemList.map(task =>(
             <li>{task}</li>
           ))
         }
