@@ -1,10 +1,11 @@
-import{v4 as uuid}from 'uuid'
-const App = () => {
+import { v4 as uuid } from "uuid";
+import React, { useState } from "react";
 
-const itemList =[{key:uuid() , task:add()}]
+const App = () => {
+  const [itemList, setItemList] = useState([{ key: uuid(), task: "" }]);
 
   const add = (event) => {
-    console.log(event.target.value);
+    setItemList([{ id: uuid, task: event.target.value }]);
   };
   const toAdd = () => {};
 
@@ -14,12 +15,9 @@ const itemList =[{key:uuid() , task:add()}]
       <button onClick={toAdd}>To Add</button>
 
       <ul>
-        {
-          itemList.map(task =>(
-            <li key={task.key}>{task.task}</li>
-          ))
-        }
-       
+        {itemList.map((task) => (
+          <li key={task.key}>{task.task}</li>
+        ))}
       </ul>
     </div>
   );
