@@ -1,6 +1,7 @@
+import{v4 as uuid}from 'uuid'
 const App = () => {
 
-const itemList =[]
+const itemList =[{key:uuid() , task:add()}]
 
   const add = (event) => {
     console.log(event.target.value);
@@ -15,7 +16,7 @@ const itemList =[]
       <ul>
         {
           itemList.map(task =>(
-            <li>{task}</li>
+            <li key={task.key}>{task.task}</li>
           ))
         }
        
