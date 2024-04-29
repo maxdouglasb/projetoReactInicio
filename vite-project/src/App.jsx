@@ -12,7 +12,8 @@ const App = () => {
     setTask(event.target.value)
   };
   const toAdd = () => {
-    setItemList([{ id: uuid(), task }])
+    setItemList([... itemList ,{ id: uuid(), task }])
+    console.log(itemList)
   };
 
   return (
