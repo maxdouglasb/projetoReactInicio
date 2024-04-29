@@ -1,13 +1,19 @@
 import { v4 as uuid } from "uuid";
 import React, { useState } from "react";
 
+
+
+
 const App = () => {
-  const [itemList, setItemList] = useState([{ key: uuid(), task: "" }]);
+  const [itemList, setItemList] = useState([{ key: uuid(), task: "nada" }]);
+  const [task, setTask] = useState('');
 
   const add = (event) => {
-    setItemList([{ id: uuid, task: event.target.value }]);
+    setTask(event.target.value)
   };
-  const toAdd = () => {};
+  const toAdd = () => {
+    setItemList([{ id: uuid(), task }])
+  };
 
   return (
     <div>
