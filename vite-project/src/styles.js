@@ -40,7 +40,7 @@ export const Button = styled.button `
 export const ListItem = styled.div `
   box-shadow: 1px 4px 10px 0px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  background: rgba(232, 255, 139, 1);
+  background: ${props => props.isFinished ? "#E8FF8B" :"#E4E4E4"};
   height: 60px;
   display: flex;
   justify-content: space-between;

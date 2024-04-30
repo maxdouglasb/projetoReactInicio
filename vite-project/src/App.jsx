@@ -27,9 +27,9 @@ const App = () => {
 
         <ul>
           {itemList.map((task) => (
-            <ListItem>
+            <ListItem key={task.key} isFinished={task.finished}>
               <FcCheckmark />
-              <li key={task.key}>{task.task}</li>
+              <li >{task.task}</li>
               <FcFullTrash />
             </ListItem>
           ))}
