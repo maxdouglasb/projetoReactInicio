@@ -4,6 +4,7 @@ import React, { useState } from "react";
 
 
 
+
 const App = () => {
   const [itemList, setItemList] = useState([{ key: uuid(), task: "nada" }]);
   const [task, setTask] = useState('');
@@ -12,7 +13,7 @@ const App = () => {
     setTask(event.target.value)
   };
   const toAdd = () => {
-    setItemList([... itemList ,{ id: uuid(), task }])
+    setItemList([...itemList, { id: uuid(), task }])
     console.log(itemList)
   };
 
